@@ -10,22 +10,26 @@
  var counter = 0;
  
  /* create socket server and listen on localhost:4000*/
- var socketServer = net.createServer().on('connection', function(socket) {
+net.createServer().on('connection', function(socket) {
 	
-	/* On every connection check counter to be less than 1. 
+	var i = 0;
+	
+	/* On every connection check counter to be less than or equals 1. 
 	 * If there are more than one open connections, jump into a infinite while loop.
 	 * This is only an example but can be forced by a computationally intensive operation (e.g.: complex database query) */
-	if (counter <= 1) {
+	if (counter > 0) {
+		console.log("INFINITE LOOP");
 		
-		/* After jumping into while loop, the event thread is blocked and the node.js main thread is waiting for 
-		 * a response. The server accepts future connections, but there is no more activity. At the present time
+		/* After jumping into while loop, the node.js main thread is waiting for a response. 
+		 * The server accepts future connections, but there is no more activity. At the present time
 		 * there is no way to reset or manipulate the event-loop. */
 		while(true){
-			i=i+1;
+			i++;
 		}
 	}
 	
 	counter++;
-	socket.write(200);
+	console.log("connected to server");
 	
- }).listen(4000);
+}).listen(4000);
+console.log("Server is running on port 4000");
