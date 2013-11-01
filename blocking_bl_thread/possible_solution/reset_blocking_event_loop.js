@@ -1,6 +1,6 @@
 /**
- * This file will show how a blocked event loop thread of node.js can be resolved.
- * In the present time there is no mechanism to allow the main thread to reset the event loop.
+ * This file will show how a blocked business logic thread of node.js and so the event loop can be resolved.
+ * In the present time there is no mechanism to allow a reset of the main thread using the event loop.
  * This can be achieved by another server or a child process polling the main server. If
  * the server is blocked, the other instance could reset the server. 
  * 

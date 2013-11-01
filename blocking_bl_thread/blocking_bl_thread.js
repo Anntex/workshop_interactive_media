@@ -1,7 +1,6 @@
 /**
- * This file will show how the event loop thread of node.js can block the entire server.
- * This is simple because the processing of events in node.js is synchronous. Do not be
- * confused. Only the I/O operations in node.js are asynchronous. 
+ * This file will show how the business logic thread of node.js can block the entire server, also the synchronous processing of the events.
+ * Do not be confused. Only the I/O operations in node.js are asynchronous. 
  * 
  * @author dennis.grewe [dg060@hdm-stuttgart.de] 10/21/2013
  */
