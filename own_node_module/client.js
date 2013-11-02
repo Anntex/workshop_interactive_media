@@ -22,7 +22,7 @@
 	};
  }
  
- /* Add client module to global 'export' property to use it in other modules. 
-  * This could be understand like the namespacing concept. We can access the client
-  * module by knowing the namespace of Client. */
+ /* Add client module to global 'exports' property to use it in other modules. 
+  * This can be understand as the concept of namespacing. 
+  * We can access the client module by knowing the namespace of Client. */
  module.exports = Client; 
